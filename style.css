@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #6fb8ff, #ff9ed8);
+}
+
+.page {
+  display: none;
+  height: 100vh;
+  padding: 24px;
+  color: #fff;
+  text-align: center;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page.active {
+  display: flex;
+  animation: fadeUp 0.6s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+p {
+  max-width: 340px;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin: 10px 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+button {
+  border: none;
+  padding: 14px 30px;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+#yesBtn {
+  background: linear-gradient(135deg, #ff4fa1, #ff7bbd);
+  color: white;
+}
+
+#noBtn {
+  background: white;
+  color: #ff4fa1;
+  position: relative;
+}
+
+.photo {
+  width: 260px;
+  max-width: 90%;
+  margin: 18px 0;
+  border-radius: 22px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.nextBtn {
+  margin-top: 20px;
+  background: rgba(255,255,255,0.9);
+  color: #ff4fa1;
+}
+
+.coupon {
+  margin-top: 25px;
+}
+
+.coupon-img {
+  width: 280px;
+  max-width: 90%;
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
